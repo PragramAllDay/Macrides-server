@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "CarsForApproval",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "registrationno": {
+      "required": true,
+      "unique": false,
+      "type": "integer"
+    },
+    "location": {
+      "type": "text",
+      "required": true
+    },
+    "ownername": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "mobileno": {
+      "type": "integer",
+      "required": true
+    },
+    "regCity": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "transmission": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "mileage": {
+      "type": "integer",
+      "required": true
+    },
+    "exteriorCarImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "interiorImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tracker": {
+      "type": "boolean",
+      "required": true
+    },
+    "insurance": {
+      "type": "boolean",
+      "required": true
+    },
+    "investor_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "cars"
+    },
+    "driver_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::driver.driver"
+    },
+    "price": {
+      "type": "integer",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "default": "0"
+    },
+    "booking_status": {
+      "type": "string",
+      "default": "0"
+    }
+  }
+}

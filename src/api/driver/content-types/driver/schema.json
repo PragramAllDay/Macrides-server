@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drivers",
+  "info": {
+    "singularName": "driver",
+    "pluralName": "drivers",
+    "displayName": "driver",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "lastName": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "phoneNo": {
+      "type": "integer",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "CNIC": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "cnicFrontImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cnicBackImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "drivingLicense": {
+      "type": "string",
+      "required": true
+    },
+    "licenseFront": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "licenseBack": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "maritalStatus": {
+      "type": "boolean"
+    },
+    "gender": {
+      "type": "boolean"
+    },
+    "city": {
+      "type": "string"
+    },
+    "experienceYears": {
+      "type": "string"
+    },
+    "previosEmployerName": {
+      "type": "string"
+    },
+    "currentEmpName": {
+      "type": "string"
+    }
+  }
+}
